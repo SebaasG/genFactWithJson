@@ -3,7 +3,9 @@ class NavComponent extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = /*html*/ `
+
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+      
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -42,16 +44,17 @@ class NavComponent extends HTMLElement {
   _toggleDisplay(component) {
     const josehptaContainer = document.querySelector(".josehpta");
     const prodComponent = document.querySelector(".productsIndex");
-
-    // Ocultar el contenedor por defecto
+  
     josehptaContainer.style.display = "none";
     prodComponent.style.display = "none";
-
+  
     // Solo mostrar el contenedor si se hace clic en "Sell"
     if (component === "sell") {
       josehptaContainer.style.display = "block";
+      prodComponent.style.display = "none";
+    } else if (component === "products") {
+      josehptaContainer.style.display = "none";
       prodComponent.style.display = "block";
-      // Mostrar el contenedor
     }
   }
 }
