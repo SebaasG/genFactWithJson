@@ -7,5 +7,7 @@ import "./js/service/indexProducts.js";
 
 import "./js/service/createComponent.js"
 import "./js/service/editComponent.js";
+import "./js/service/deleteComponent.js"
+import "./js/service/listComponent.js"
 
 document.addEventListener("DOMContentLoaded", () => {});

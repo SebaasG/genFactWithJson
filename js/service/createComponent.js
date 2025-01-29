@@ -1,3 +1,5 @@
+import { getProduct } from "../controllers/createController.js";
+
 class CreateComponent extends HTMLElement {
 
     constructor() {
@@ -95,13 +97,24 @@ class CreateComponent extends HTMLElement {
   
           <!-- Botón de Submit -->
           <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id= "createProd">Submit</button>
           </div>
         </div>
       </form>
       `;
     }
-  }
+    connectedCallback() {
+      const btn = this.shadowRoot.querySelector("#createProd"); // Selección correcta del botón
+
+        btn.addEventListener("click", () => {
+          getProduct(this);
+        });
+      
+      }
+    }
+  
+
+ 
   
   customElements.define("create-component", CreateComponent);
   

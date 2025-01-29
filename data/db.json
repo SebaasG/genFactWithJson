@@ -4,121 +4,141 @@
       "id": "1",
       "name": "Arroz 1kg",
       "value": 2200,
-      "stock": 50
+      "stock": 50,
+      "img": "https://example.com/arroz.jpg"
     },
     {
       "id": "2",
       "name": "Azúcar 1kg",
       "value": 3000,
-      "stock": 40
+      "stock": 40,
+      "img": "https://example.com/azucar.jpg"
     },
     {
       "id": "3",
       "name": "Harina 1kg",
       "value": 2500,
-      "stock": 35
+      "stock": 35,
+      "img": "https://example.com/harina.jpg"
     },
     {
       "id": "4",
       "name": "Aceite 1L",
       "value": 6000,
-      "stock": 30
+      "stock": 30,
+      "img": "https://example.com/aceite.jpg"
     },
     {
       "id": "5",
       "name": "Lentejas 500g",
       "value": 3500,
-      "stock": 20
+      "stock": 20,
+      "img": "https://example.com/lentejas.jpg"
     },
     {
       "id": "6",
       "name": "Pasta de dientes 100g",
       "value": 3500,
-      "stock": 25
+      "stock": 25,
+      "img": "https://example.com/pasta.jpg"
     },
     {
       "id": "7",
       "name": "Jabón de baño 125g",
       "value": 1200,
-      "stock": 60
+      "stock": 60,
+      "img": "https://example.com/jabon.jpg"
     },
     {
       "id": "8",
       "name": "Toallas higiénicas (pack 10)",
       "value": 4800,
-      "stock": 15
+      "stock": 15,
+      "img": "https://example.com/toallas.jpg"
     },
     {
       "id": "9",
       "name": "Leche 1L",
       "value": 2800,
-      "stock": 50
+      "stock": 50,
+      "img": "https://example.com/leche.jpg"
     },
     {
       "id": "10",
       "name": "Pan de molde 500g",
       "value": 3500,
-      "stock": 40
+      "stock": 40,
+      "img": "https://example.com/pan.jpg"
     },
     {
       "id": "11",
       "name": "Jugo de naranja 1L",
       "value": 5500,
-      "stock": 30
+      "stock": 30,
+      "img": "https://example.com/jugo.jpg"
     },
     {
       "id": "12",
       "name": "Té Lipton 20 bolsitas",
       "value": 4000,
-      "stock": 25
+      "stock": 25,
+      "img": "https://example.com/te.jpg"
     },
     {
       "id": "13",
       "name": "Galletas María 400g",
       "value": 2500,
-      "stock": 40
+      "stock": 40,
+      "img": "https://example.com/galletas.jpg"
     },
     {
       "id": "14",
       "name": "Cereal Cornflakes 500g",
       "value": 7500,
-      "stock": 10
+      "stock": 10,
+      "img": "https://example.com/cereal.jpg"
     },
     {
       "id": "15",
       "name": "Atún en conserva 170g",
       "value": 5000,
-      "stock": 20
+      "stock": 20,
+      "img": "https://example.com/atun.jpg"
     },
     {
       "id": "16",
       "name": "Mantequilla 500g",
       "value": 7500,
-      "stock": 15
+      "stock": 15,
+      "img": "https://example.com/mantequilla.jpg"
     },
     {
       "id": "17",
       "name": "Tomates 1kg",
       "value": 4000,
-      "stock": 30
+      "stock": 30,
+      "img": "https://example.com/tomates.jpg"
     },
     {
       "id": "18",
       "name": "Cebollas 1kg",
       "value": 3500,
-      "stock": 20
+      "stock": 20,
+      "img": "https://example.com/cebollas.jpg"
     },
     {
       "id": "19",
       "name": "Papaya 1kg",
       "value": 4500,
-      "stock": 25
+      "stock": 25,
+      "img": "https://example.com/papaya.jpg"
     },
     {
       "id": "20",
       "name": "Papas 1kg",
       "value": 2500,
-      "stock": 40
+      "stock": 40,
+      "img": "https://example.com/papas.jpg"
     }
   ],
   "invoices": [
