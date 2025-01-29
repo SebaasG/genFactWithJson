@@ -2,6 +2,7 @@ import "./js/service/userComponent.js";
 import "./js/service/prodComponent.js";
 import "./js/service/tableComponent.js";
 import "./js/service/summary.js";
+import "./js/service/navComponent.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // // const userComponent = document.querySelector("user-component");

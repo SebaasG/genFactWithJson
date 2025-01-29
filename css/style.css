@@ -1,3 +1,7 @@
 .generalContainer {
   max-width: 1000px;
 }
+
+.imgContainer {
+  background-color: white;
+}
