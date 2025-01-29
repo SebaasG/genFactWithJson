@@ -1,13 +1,16 @@
 const userComponent = document.querySelector("user-component");
-export function collectUserData(usercomponent) {
-  
-  const numInvoice = userComponent.shadowRoot.getElementById("invNumber").value;
+
+export async function collectUserData(usercomponent) {
+  const numInvoice = await userComponent.shadowRoot.getElementById("invNumber")
+    .value;
   const document = userComponent.shadowRoot.getElementById("idClient").value;
   const name = userComponent.shadowRoot.getElementById("nameClient").value;
   const lastName = userComponent.shadowRoot.getElementById("lastClient").value;
   const address = userComponent.shadowRoot.getElementById("address").value;
   const email = userComponent.shadowRoot.getElementById("email").value;
-  const nameProd = usercomponent.shadowRoot.getElementById("selectProd").selectedOptions[0].text;
+  const nameProd =
+    usercomponent.shadowRoot.getElementById("selectProd").selectedOptions[0]
+      .text;
   const codeProd = usercomponent.shadowRoot.getElementById("codeNumber").value;
   const value = usercomponent.shadowRoot.getElementById("unitValue").value;
   const amount = usercomponent.shadowRoot.getElementById("amountProd").value;

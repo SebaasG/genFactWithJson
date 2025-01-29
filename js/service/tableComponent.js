@@ -51,16 +51,20 @@ class TableComponent extends HTMLElement {
   }
 
   connectedCallback() {
-    // Obtenemos el componente de usuario
-    const userComponent = document.querySelector("user-component");
+    // Usamos setTimeout para esperar un ciclo de evento de la renderización
+    setTimeout(() => {
+      const userComponent = document.querySelector("user-component");
 
-    // Escuchamos el evento de envío de datos del usuario
-    userComponent.addEventListener("userDataSubmitted", (event) => {
-      // Obtenemos los datos del usuario del evento
-      const userData = event.detail;
-      // Llamamos a la función para llenar la tabla con los datos del usuario
-      setTable(this, userData);
-    });
+      if (userComponent) {
+        // Ahora agregamos el event listener solo si 'user-component' está presente
+        userComponent.addEventListener("userDataSubmitted", (event) => {
+          const userData = event.detail;
+          setTable(this, userData);
+        });
+      } else {
+        console.warn("user-component no encontrado.");
+      }
+    }, 0); // Deja que el navegador renderice antes de buscar el 'user-component'
   }
 }
 
