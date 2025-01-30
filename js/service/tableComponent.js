@@ -16,7 +16,7 @@ class TableComponent extends HTMLElement {
         <thead>
           <div class="d-flex justify-content-center no-wrap">
             <tr>
-              <th colspan="4" class="text-center fs-5">Purchase detail</th>
+              <th colspan="6" class="text-center fs-5 mt-5">Purchase detail</th>
             </tr>
           </div>
           <tr>

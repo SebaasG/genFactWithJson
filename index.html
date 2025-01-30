@@ -1,54 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script type="module" src="./app.js" defer></script>
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script type="module" src="./app.js" defer></script>
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Document</title>
+</head>
 
-  <body>
-    <div class="container generalContainer">
-      <nav-component></nav-component>
+<body>
+  <!-- Contenedor principal con clase 'generalContainer' -->
+  <div class="container generalContainer">
+    <!-- Componente de navegación que se carga aquí -->
+    <nav-component></nav-component>
 
-      <div class="josehpta" style="display: none">
-        <user-component></user-component>
-        <product-component></product-component>
-        <table-component></table-component>
-        <summary-component></summary-component>
-      </div>
+    <!-- Contenedor oculto que parece ser la vista principal del sistema (productos, usuario, resumen) -->
+    <div class="josehpta" style="display: none">
+      <!-- Componente de usuario, productos y tabla -->
+      <user-component></user-component>
+      <product-component></product-component>
+      <table-component></table-component>
+      <summary-component></summary-component>
     </div>
-    <div class="productsIndex" style="display: none">
-      <index-products-component></index-products-component>
-    </div>
-
-    <div class="productCrud" style="display: none">
-      <create-component></create-component>
   </div>
-  
+
+  <!-- Contenedor de productos index, oculto por defecto -->
+  <div class="productsIndex" style="display: none">
+    <!-- Componente que indexa los productos -->
+    <index-products-component></index-products-component>
+  </div>
+
+  <!-- Contenedor para la creación de productos, oculto por defecto -->
+  <div class="productCrud" style="display: none">
+    <!-- Componente para crear productos -->
+    <create-component></create-component>
+  </div>
+
+  <!-- Contenedor para editar productos, oculto por defecto -->
   <div class="editCrud" style="display: none">
-      <edit-component></edit-component>
+    <!-- Componente para editar productos -->
+    <edit-component></edit-component>
   </div>
-  
+
+  <!-- Contenedor para eliminar productos, oculto por defecto -->
   <div class="deleteCrud" style="display: none">
-      <delete-component></delete-component>
+    <!-- Componente para eliminar productos -->
+    <delete-component></delete-component>
   </div>
-  
+
+  <!-- Contenedor para listar productos, oculto por defecto -->
   <div class="listCrud" style="display: none">
-      <list-component></list-component>
+    <!-- Componente para listar productos -->
+    <list-component></list-component>
   </div>
-  
-  </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </html>

@@ -3,7 +3,6 @@ class NavComponent extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = /*html*/ `
-
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
       
       <nav class="navbar navbar-light bg-light">
@@ -14,16 +13,15 @@ class NavComponent extends HTMLElement {
           </a>
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link active fs-4" aria-current="page" href="#" id="sell-link">Sell</a>
+              <a class="nav-link fs-4" aria-current="page" href="#" id="sell-link">Sell</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active fs-4" href="#" id="products-link">Products</a>
+              <a class="nav-link fs-4" href="#" id="products-link">Products</a>
             </li>
           </ul>
         </div>
       </nav>
     `;
-
     this._addEventListeners();
   }
 
@@ -42,21 +40,22 @@ class NavComponent extends HTMLElement {
   }
 
   _toggleDisplay(component) {
+    // Obtener los contenedores de las secciones
     const josehptaContainer = document.querySelector(".josehpta");
     const prodComponent = document.querySelector(".productsIndex");
-  
+    
+    // Ocultar ambos contenedores
     josehptaContainer.style.display = "none";
     prodComponent.style.display = "none";
-  
-    // Solo mostrar el contenedor si se hace clic en "Sell"
+
+    // Mostrar la sección correspondiente al enlace clickeado
     if (component === "sell") {
       josehptaContainer.style.display = "block";
-      prodComponent.style.display = "none";
     } else if (component === "products") {
-      josehptaContainer.style.display = "none";
       prodComponent.style.display = "block";
     }
   }
 }
 
+// Definir el componente personalizado en el DOM
 customElements.define("nav-component", NavComponent);

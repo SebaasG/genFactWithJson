@@ -1,20 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Arroz 1kg",
-      "value": 2200,
-      "stock": 50,
-      "img": "https://example.com/arroz.jpg"
-    },
-    {
-      "id": "2",
-      "name": "Azúcar 1kg",
-      "value": 3000,
-      "stock": 40,
-      "img": "https://example.com/azucar.jpg"
-    },
-    {
       "id": "3",
       "name": "Harina 1kg",
       "value": 2500,
@@ -78,13 +64,6 @@
       "img": "https://example.com/jugo.jpg"
     },
     {
-      "id": "12",
-      "name": "Té Lipton 20 bolsitas",
-      "value": 4000,
-      "stock": 25,
-      "img": "https://example.com/te.jpg"
-    },
-    {
       "id": "13",
       "name": "Galletas María 400g",
       "value": 2500,
@@ -125,20 +104,6 @@
       "value": 3500,
       "stock": 20,
       "img": "https://example.com/cebollas.jpg"
-    },
-    {
-      "id": "19",
-      "name": "Papaya 1kg",
-      "value": 4500,
-      "stock": 25,
-      "img": "https://example.com/papaya.jpg"
-    },
-    {
-      "id": "20",
-      "name": "Papas 1kg",
-      "value": 2500,
-      "stock": 40,
-      "img": "https://example.com/papas.jpg"
     }
   ],
   "invoices": [
@@ -148,6 +113,13 @@
       "clientId": "",
       "total": 23800,
       "date": "2025-01-29 08:20:31"
+    },
+    {
+      "id": "dabe",
+      "invoiceId": "30333dcbe0c",
+      "clientId": "23213213",
+      "total": 24871,
+      "date": "2025-01-30 19:35:38"
     }
   ]
 }

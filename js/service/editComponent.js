@@ -1,4 +1,4 @@
-import { searchProduct } from "../controllers/editController.js";
+import { searchProduct, saveProduct } from "../controllers/editController.js";
 
 class CreateComponent extends HTMLElement {
 
@@ -107,7 +107,7 @@ class CreateComponent extends HTMLElement {
 
         <!-- Botón de Submit -->
         <div class="d-flex justify-content-center">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" id= "saveBtn" >Submit</button>
         </div>
       </div>
     </form>
@@ -115,12 +115,18 @@ class CreateComponent extends HTMLElement {
   }
 
   connectedCallback() {
-  const btn = this.shadowRoot.querySelector("#searchBtn");
-  btn.addEventListener("click", (event) => {
-    event.preventDefault();
-    searchProduct(this);
-          });
+    const btn = this.shadowRoot.querySelector("#searchBtn");
+    const btnSave = this.shadowRoot.querySelector("#saveBtn");
+    btn.addEventListener("click", (event) => {
+      event.preventDefault();
+      searchProduct(this);
+    });
+    btnSave.addEventListener("click", async (event) => {
+      event.preventDefault();
+      await saveProduct(this);
+    });
   }
+
 }
 
 customElements.define("edit-component", CreateComponent);

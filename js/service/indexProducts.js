@@ -5,7 +5,7 @@ class IndexProducts extends HTMLElement {
 
     const link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "../css/style.css"; // Ruta a tu archivo CSS
+    link.href = "../css/style.css"; // Ruta al archivo CSS
     this.shadowRoot.appendChild(link);
 
     this.shadowRoot.innerHTML = /*html*/ `
@@ -13,6 +13,7 @@ class IndexProducts extends HTMLElement {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 
     <style>
+      /* Estilos de la barra de navegación */
       .nav-item {
         font-size: 18px;
         font-weight: 600;
@@ -34,6 +35,7 @@ class IndexProducts extends HTMLElement {
         border-bottom: 3px solid black;  /* Línea activa */
       }
 
+      /* Estilos para las opciones de navegación */
       .optionNavProd {
         padding: 10px 20px;
         margin: 5px;
@@ -43,6 +45,8 @@ class IndexProducts extends HTMLElement {
         background-color: #f1f1f1;
       }
     </style>
+
+    <!-- Barra de navegación -->
     <ul class="nav justify-content-center">
       <li class="nav-item fs-5 px-5">
         <a class="nav-link optionNavProd" id="create-link" aria-current="page" href="#">Create</a>
@@ -59,39 +63,52 @@ class IndexProducts extends HTMLElement {
     </ul>
     `;
 
-    this.addEventListeners();
+    this.addEventListeners(); // Se agrega el listener de los enlaces
   }
 
+  connectedCallback() {
+    this.setDefaultActiveSection();  // Establecer "Edit" como activo por defecto
+  }
+
+  // Método que agrega los eventos de click a cada enlace de navegación
   addEventListeners() {
     const links = this.shadowRoot.querySelectorAll('.nav-link');
     
     links.forEach(link => {
       link.addEventListener('click', (event) => {
-        // Remove the 'active' class from all links
+        // Eliminar la clase 'active' de todos los enlaces
         links.forEach(link => link.classList.remove('active'));
 
-        // Add the 'active' class to the clicked link
-        event.target.classList.add('active');
+        event.target.classList.add('active'); // Agregar 'active' al enlace clickeado
 
-        // Toggle the display based on the clicked link
-        const section = event.target.id.split('-')[0];  // Get the section name (e.g., "create", "edit", "delete", "list")
-        this._toggleDisplay(section);
+        const section = event.target.id.split('-')[0];  // Extraer la sección correspondiente del ID
+        this._toggleDisplay(section); // Llamar a la función para mostrar la sección adecuada
       });
     });
   }
 
+  // Método para establecer la sección por defecto (Edit)
+  setDefaultActiveSection() {
+    const editLink = this.shadowRoot.querySelector('#list-link');
+    editLink.classList.add('active'); // Agregar la clase 'active' al enlace de "list"
+    this._toggleDisplay('list'); // Mostrar la sección de "list" por defecto
+  }
+
+  // Método para mostrar u ocultar las secciones de CRUD según la opción seleccionada
   _toggleDisplay(component) {
+    // Secciones principales que contienen los contenedores
     const productCrud = document.querySelector(".productCrud");
     const editCrud = document.querySelector(".editCrud");
     const deleteCrud = document.querySelector(".deleteCrud");
     const listCrud = document.querySelector(".listCrud");
 
-    // Hide all sections first
+    // Ocultar todas las secciones
     productCrud.style.display = "none";
     editCrud.style.display = "none";
     deleteCrud.style.display = "none";
     listCrud.style.display = "none";
 
+    // Mostrar solo la sección correspondiente según la opción seleccionada
     if (component === "create") {
       productCrud.style.display = "block";  
     } else if (component === "edit") {
@@ -104,4 +121,5 @@ class IndexProducts extends HTMLElement {
   }
 }
 
+// Definir el componente personalizado en el DOM
 customElements.define("index-products-component", IndexProducts);
